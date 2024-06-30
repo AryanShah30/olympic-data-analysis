@@ -8,16 +8,12 @@ import matplotlib.pyplot as plt
 import plotly.figure_factory as ff
 from streamlit_option_menu import option_menu
 
-df = pd.read_csv(
-    "athlete_events.csv"
-)
-region_df = pd.read_csv(
-    "noc_regions.csv"
-)
+df = pd.read_csv("athlete_events.csv")
+region_df = pd.read_csv("noc_regions.csv")
 
 df = preprocessor.preprocess(df, region_df)
 
-st.set_page_config(page_title="Olympics Analysis", page_icon="🏅", layout='wide')
+st.set_page_config(page_title="Olympics Analysis", page_icon="🏅", layout="wide")
 st.sidebar.title("Summer Olympics Analysis")
 st.sidebar.header("From Athens to Rio")
 st.sidebar.image("images.png")
@@ -64,7 +60,18 @@ years.insert(0, "All")
 
 # TABLE OF CONTENTS
 if user_menu == "Table of Contents":
+    st.subheader("📜 Overview")
+    st.write(
+        '''
+        Explore the world of Olympic Analysis, delving into over a century of athletic excellence from the inaugural games in 1896 to the modern spectacles of 2016. This comprehensive analysis covers key facets including the Executive Summary, Medal Census, Athlete Demographics, Temporal and Geographical Insights, Performance Analysis, Medal Dynamics, and Location Impact.
 
+        Navigate through our interactive sidebar to uncover trends such as shifts in Olympic participation by gender, the emergence of dominant sporting dynasties, and the cultural impacts of host cities. Discover the achievements of nations through their medal tallies and explore the unforgettable performances that define Olympic history.
+
+        Whether you're a sports enthusiast, data analyst, or researcher, these tools offer an insightful journey through Olympic history—a tribute to excellence, resilience, and the spirit of competition.
+        '''
+    )
+
+    st.markdown("---")
     st.subheader("📄 Executive Summary")
     st.write("- Top Statistics")
     st.write("- Nations' Medal Distribution")
