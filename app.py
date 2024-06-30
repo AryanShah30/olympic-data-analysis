@@ -14,7 +14,6 @@ region_df = pd.read_csv("noc_regions.csv")
 df = preprocessor.preprocess(df, region_df)
 
 st.set_page_config(page_title="Olympics Analysis", page_icon="🏅", layout="wide")
-st.sidebar.title("Summer Olympics Analysis")
 st.sidebar.header("From Athens to Rio")
 st.sidebar.image("images.png")
 
@@ -62,6 +61,9 @@ years.insert(0, "All")
 
 # TABLE OF CONTENTS
 if user_menu == "Table of Contents":
+    st.header("Summer Olympics Analysis")
+    st.markdown("---")
+    
     st.subheader("📜 Overview")
     st.write(
         '''
