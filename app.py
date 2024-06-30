@@ -9,10 +9,10 @@ import plotly.figure_factory as ff
 from streamlit_option_menu import option_menu
 
 df = pd.read_csv(
-    "D:/Internship - Machine Learning/Projects/EDA - Olympic Data Analysis/athlete_events.csv"
+    "athlete_events.csv"
 )
 region_df = pd.read_csv(
-    "D:/Internship - Machine Learning/Projects/EDA - Olympic Data Analysis/noc_regions.csv"
+    "noc_regions.csv"
 )
 
 df = preprocessor.preprocess(df, region_df)
