@@ -31,6 +31,7 @@ with st.sidebar:
             "Performance Analysis",
             "Medal Analysis",
             "Location Analysis",
+            "Connect"
         ],
         icons=[
             "list",
@@ -42,6 +43,7 @@ with st.sidebar:
             "speedometer",
             "trophy",
             "map",
+            "person-lines-fill"
         ],
         default_index=0,
     )
@@ -601,3 +603,22 @@ if user_menu == "Location Analysis":
     fig = px.bar(multiple_host_cities, x="City", y="No. of times")
     fig.update_traces(width=0.5)
     st.plotly_chart(fig)
+
+
+if user_menu == "Connect":
+    import streamlit as st
+
+    st.title("Connect with Me")
+    st.markdown("""
+        Feel free to reach out to me via email or connect with me on LinkedIn and GitHub! 💬
+    """)
+    st.write("")
+
+    st.subheader("Contact Information 📩")
+    st.write("**Name:** Aryan Shah")
+    st.write("**Email:** aryanshah1957@gmail.com")
+    st.write("")
+
+    st.subheader("Social Media 🌍")
+    st.write("[LinkedIn](https://www.linkedin.com/in/aryanashah/) 🔗")
+    st.write("[GitHub](https://github.com/AryanShah30) 🔗")
