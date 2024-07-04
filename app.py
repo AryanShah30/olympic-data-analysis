@@ -131,6 +131,11 @@ if user_menu == "Table of Contents":
     st.write("- Olympic Host Cities")
     st.write("- Cities that have Hosted Multiple Games")
     st.markdown("---")
+    st.markdown("""
+    <div style='color: gray; font-size: 15px;'>
+        Last updated on 07/06/2024.
+    </div>
+    """, unsafe_allow_html=True)
 
 # EXECUTIVE SUMMARY
 if user_menu == "Executive Summary":
